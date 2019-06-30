@@ -1,0 +1,1 @@
+Let's begin with Linting. The tests you run with jest are executed in a custom Jest environment, which is just javascript plus some more stuff that's made globally available.

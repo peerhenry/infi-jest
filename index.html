@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+				<section>
+					<img src="assets/jestimage.png" alt="">
+				</section>
+				
+				<!-- ============================ -->
+
+				<!-- LINTING -->
+
+				<section>
+					<h1>Linting</h1>
+					<img src="assets/linting.jpg" alt="">
+				</section>
+
+				<!-- ============================ -->
+
+				<section>
+						<div class="normal-text">Jest environment provides (among other things):</div>
+						<div class="biggy">
+						<pre><code data-trim data-noescape class="hljs js">
+						💌 expect(...)
+						</code></pre>
+						<pre><code data-trim data-noescape class="hljs js">
+						🔬 test(...)
+						</code></pre>
+						<pre><code data-trim data-noescape class="hljs js">
+						✍ describe(...)
+						</code></pre>
+						<pre><code data-trim data-noescape class="hljs js">
+						🤡 it(...)
+						</code></pre>
+						</div>
+				</section>
+
+				<!-- ============================ -->
+				
+				<section>
+					<img src="assets/not-defined.png" alt="">
+				</section>
+
+				<!-- ============================ -->
+
+				<section>
+					<img src="assets/lint-config.png" alt="">
+				</section>
+
+				<!-- ============================ -->
+				
+				<section>
+					<img src="assets/lint-override.png" alt="">
+				</section>
+
+				<!-- ============================ -->
+				
+				<section>
+					<div class="normal-text">Jest environment provides (among other things):</div>
+					<div class="biggy">
+						<pre><code data-trim data-noescape class="hljs js">
+										💌 expect(...)
+										</code></pre>
+						<pre class="non-highlight"><code data-trim data-noescape class="hljs js">
+										🔬 test(...)
+										</code></pre>
+						<pre class="non-highlight"><code data-trim data-noescape class="hljs js">
+										✍ describe(...)
+										</code></pre>
+						<pre class="non-highlight"><code data-trim data-noescape class="hljs js">
+										🤡 it(...)
+										</code></pre>
+					</div>
+				</section>
+
+				<!-- ============================ -->
+
+				<section>
+					<img src="assets/jest-homepage.png" alt="">
+				</section>
+
+				<!-- ============================ -->
+				
+				<section>
+					<pre><code data-trim data-noescape class="hljs js">expect(value).toBe(42)</code></pre>
+					<div class="fragment">
+						<pre><span class="ok-indicator-small">❌</span><code data-trim data-noescape class="hljs js">
+						const thing = { x: 42 }
+						expect(number).toBe({ x: 42 })
+						</code></pre>
+						<pre><span class="ok-indicator-small">✅</span><code data-trim data-noescape class="hljs js">
+						const thing = { x: 42 }
+						expect(number).toEqual({ x: 42 })
+						</code></pre>
+					</div>
+				</section>
+			
+				<!-- ============================ -->
+				
+				<section>
+					<div class="normal-text">Jest environment provides (among other things):</div>
+					<div class="biggy">
+						<pre class="non-highlight"><code data-trim data-noescape class="hljs js">
+						💌 expect(...)
+						</code></pre>
+						<pre><code data-trim data-noescape class="hljs js">
+						🔬 test(...)
+						</code></pre>
+						<pre class="non-highlight"><code data-trim data-noescape class="hljs js">
+						✍ describe(...)
+						</code></pre>
+						<pre class="non-highlight"><code data-trim data-noescape class="hljs js">
+						🤡 it(...)
+						</code></pre>
+					</div>
+				</section>
+
+				<!-- ============================ -->
+
+				<section>
+					<div>
+						<pre><code data-trim data-noescape class="hljs js">
+							test('My test should run', () => {
+							  // Arrange
+							  // Act
+							  // Assert
+							})
+						</code></pre>
+					</div>
+				</section>
+
+				<!-- ============================ -->
+				
+				<section>
+					<div class="normal-text">Jest environment provides (among other things):</div>
+					<div class="biggy">
+						<pre class="non-highlight"><code data-trim data-noescape class="hljs js">
+						💌 expect(...)
+						</code></pre>
+						<pre class="non-highlight"><code data-trim data-noescape class="hljs js">
+						🔬 test(...)
+						</code></pre>
+						<pre><code data-trim data-noescape class="hljs js">
+						✍ describe(...)
+						</code></pre>
+						<pre class="non-highlight"><code data-trim data-noescape class="hljs js">
+						🤡 it(...)
+						</code></pre>
+					</div>
+				</section>
+
+				<!-- ============================ -->
+
+				<section>
+					<div>
+						<pre><code data-trim data-noescape class="hljs js">
+							describe('my function', () => {
+							  test('my first test', () => {...})
+							  test('my second test', () => {...})
+							})
+						</code></pre>
+					</div>
+				</section>
+
+				<!-- ============================ -->
+				
+				<section>
+					<div class="normal-text">Jest environment provides (among other things):</div>
+					<div class="biggy">
+						<pre class="non-highlight"><code data-trim data-noescape class="hljs js">
+										💌 expect(...)
+										</code></pre>
+						<pre class="non-highlight"><code data-trim data-noescape class="hljs js">
+										🔬 test(...)
+										</code></pre>
+						<pre class="non-highlight"><code data-trim data-noescape class="hljs js">
+										✍ describe(...)
+										</code></pre>
+						<pre><code data-trim data-noescape class="hljs js">
+										🤡 it(...)
+										</code></pre>
+					</div>
+				</section>
+
+				<!-- ============================ -->
+
+				<section>
+					<h1>🤡</h1>
+					<p>Just an alias of test, lol!</p>
+				</section>
+
+
+        <!-- ENVIRONMENT -->
+
+        <!-- COVERAGE -->
+
+        <!-- SNAPSHOT TESTING -->
+
+        <!-- ============================ -->
+				<!-- MOCKING THINGS -->
+				
+				<section>
+					<h1>Mocking things</h1>
+				</section>
+
+				<!-- ============================ -->
+
+        <section>
+          <h4>mocking things</h4>
+          <div>
+            <p class="small-header">mock functions</p>
+            <pre><code data-trim data-noescape class="hljs js">
+const myMockFunction = jest.fn()
+</code></pre>
+					
+<div class="fragment">
+	<p class="small-header">mock implementation</p>
+	<pre><code data-trim data-noescape class="hljs js">
+const myMockFunction = jest.fn(() => { ... })
+</code></pre></div>
+</section>
+
+					<!-- ============================ -->
+
+					<section>
+					<h4>verifying on mock functions</h4>
+          <div class="fragment">
+            <p class="small-header">Verifying mock calls</p>
+            <pre><code data-trim data-noescape class="hljs js">
+expect(myMockFunction).toHaveBeenCalledTimes(1)
+</code></pre>
+          </div>
+
+          <div class="fragment">
+            <p class="small-header">Verifying arguments</p>
+            <pre><code data-trim data-noescape class="hljs js">
+expect(myMockFunction).toHaveBeenCalledWith('expectedArgument', 42)
+</code></pre>
+          </div>
+
+          <div class="fragment">
+            <p class="small-header">Verifying types</p>
+            <pre><code data-trim data-noescape class="hljs js">
+expect(myMockFunction).toHaveBeenCalledWith({
+	color: expect.any(String)
+})
+</code></pre>
+          </div>
+
+          <div class="fragment">
+            <p class="small-header">Verifying a specific argument</p>
+            <pre><code data-trim data-noescape class="hljs js">
+expect(myMockFunction).toHaveBeenCalledWith(expect.anything(), 42)
+</code></pre>
+          </div>
+        </section>
+
+        <!-- ============================ -->
+
+        <section>
+          <h4>Mocking regular exports</h4>
+          <pre><code data-trim data-noescape>
+export myFunction() {...}
+					</code></pre>
+          <div class="fragment">
+            <pre><code data-trim data-noescape class="hljs js">
+import * as dependency from '@/dependency.js'
+dependency.myFunction = jest.fn()
+						</code></pre>
+          </div>
+        </section>
+
+        <!-- ============================ -->
+
+        <section>
+          <h4>Mocking default exports</h4>
+          <pre>
+						<code data-trim data-noescape>
+export default myFunction() {...}
+						</code></pre>
+          <div class="fragment">
+            <pre>
+						<code data-trim data-noescape class="hljs js">
+import * as dependency from '@/dependency.js'
+dependency.default = jest.fn()
+						</code></pre>
+          </div>
+        </section>
+
+        <!-- ============================ -->
+
+        <section>
+          <h4>Mocking class instances</h4>
+          <pre><code data-trim data-noescape class="hljs js">
+class MyClass {
+  constructor() {
+    ...
+  }
+  someFunction() {
+    ...
+  }
+}
+export default new MyClass()
+						</code></pre>
+          <div class="fragment fade-in">
+            <pre><code data-trim data-noescape class="hljs js">
+import * as dependency from '@/MyClass.js'
+
+dependency.default = {
+  someFunction: jest.fn()
+}
+						</code></pre>
+          </div>
+        </section>
+
+        <!-- ============================ -->
+
+        <section data-transition="slide-in fade-out">
+          <h4>Mocking classes</h4>
+          <pre><code data-trim data-noescape class="hljs js" data-line-numbers>
+class MyClass {
+  constructor() {
+    ...
+  }
+  someFunction() {
+    ...
+  }
+}
+export default MyClass
+						</code></pre>
+          <div class="fragment fade-in">
+            <pre><code data-trim data-noescape class="hljs js" data-line-numbers>
+import * as dependency from '@/MyClass.js'
+
+jest.mock('@/dependency.js', () =>
+  jest.fn().mockImplementation(() => ({
+    someFunction: () => {}
+  }))
+)
+						</code></pre>
+          </div>
+        </section>
+
+        <!-- ============================ -->
+
+        <section data-transition="fade-in">
+          <h4>Mocking classes</h4>
+          <pre><code data-trim data-noescape class="hljs" data-line-numbers="0">
+class MyClass {
+	constructor() {
+    ...
+  }
+  someFunction() {
+    ...
+  }
+}
+export default MyClass
+						</code></pre>
+          <div>
+            <pre><code data-trim data-noescape class="hljs" data-line-numbers="5">
+import MyClass from '@/MyClass.js'
+
+jest.mock('@/MyClass.js', () =>
+  jest.fn().mockImplementation(() => ({
+    someFunction: () => {}
+  }))
+)
+							</code></pre>
+          </div>
+        </section>
+
+        <!-- ============================ -->
+
+        <section data-transition="fade-in">
+          <h4>Mocking classes</h4>
+          <pre><code data-trim data-noescape class="hljs" data-line-numbers="0">
+class MyClass {
+  constructor() {
+    ...
+  }
+  someFunction() {
+    ...
+  }
+}
+export default MyClass
+						</code></pre>
+          <div>
+            <pre><code data-trim data-noescape class="hljs" data-line-numbers="5">
+import MyClass from '@/MyClass.js'
+
+jest.mock('@/MyClass.js', () =>
+  jest.fn().mockImplementation(() => ({
+    someFunction: jest.fn()
+  }))
+)
+						</code></pre>
+          </div>
+        </section>
+
+        <!-- ============================ -->
+
+        <section data-transition="fade-in slide-out">
+          <h4>Mocking classes</h4>
+          <pre><code data-trim data-noescape class="hljs" data-line-numbers="0">
+class MyClass {
+	constructor() {
+		...
+	}
+	someFunction() {
+		...
+	}
+}
+export default MyClass
+						</code></pre>
+          <div>
+            <pre><code data-trim data-noescape class="hljs" data-line-numbers="3,5-7">
+import MyClass from '@/MyClass.js'
+
+const mockSomeFunction = jest.fn(() => {...})
+jest.mock('@/MyClass.js', () =>
+  jest.fn().mockImplementation(() => ({
+    someFunction: mockSomeFunction
+  }))
+)
+							</code></pre>
+          </div>
+        </section>
+
+        <!-- ============================ -->
+
+        <section>
+          <h4>Mocking classes</h4>
+          <div>
+            <pre><span class="ok-indicator">❌</span><code data-trim data-noescape class="hljs" data-line-numbers="3">
+import MyClass from '@/MyClass.js'
+
+const myLittleMock = jest.fn(() => {...})
+jest.mock('@/MyClass.js', () =>
+  jest.fn().mockImplementation(() => ({
+  someFunction: myLittleMock
+  }))
+)
+							</code></pre>
+          </div>
+
+          <div>
+            <pre><span class="ok-indicator">✅</span><code data-trim data-noescape class="hljs" data-line-numbers="3">
+import MyClass from '@/MyClass.js'
+
+const mockSomeFunction = jest.fn(() => {...})
+jest.mock('@/MyClass.js', () =>
+  jest.fn().mockImplementation(() => ({
+    someFunction: mockSomeFunction
+  }))
+)
+						</code></pre>
+          </div>
+        </section>
+
+        <!-- ============================ -->
+
+        <!-- SNAPSHOT TESTING -->
+
+        <section>Slide 2</section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          { src: "plugin/highlight/highlight.js", async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+.reveal pre {
+  margin-bottom: 2em;
+  margin-top: 0;
+}
+
+.ok-indicator {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  font-size: 200%;
+}
+
+.ok-indicator-small {
+  position: absolute;
+  right: 0.2em;
+  top: 0.2em;
+  font-size: 200%;
+}
+
+p.small-header {
+  font-size: 0.55em;
+  text-align: left;
+  margin: 0;
+}
+
+.normal-text {
+  font-size: 0.55em;
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+.biggy pre {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+.non-highlight {
+  opacity: 0.3;
+}
