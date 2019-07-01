@@ -2,6 +2,9 @@
 Howmany of you write javascript on a regular basis
 And howmany of you write javascript unit tests on a regular basis?
 
-Frontend projects these days can be so big and complicated that they rival the complexity of the backend.
+Frontend projects these days can be so big and complicated that they often rival the complexity of the backend.
+That means frontend developers need the tools that traditionaly were only available to backend developers.
+One of which is of course automated testing, and we have a lot to choose from.
+Mocha, Jasmine, AVA, Karma, Sinon, Chai. 
 
 Let's begin with Linting. The tests you run with jest are executed in a custom Jest environment, which is just javascript plus some more stuff that's made globally available.

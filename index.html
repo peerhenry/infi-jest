@@ -490,14 +490,14 @@ jest.mock('@/MyClass.js', () =>
         </section>
 
 				<!-- ============================ -->
-				
-				
 
 				<!-- SNAPSHOT TESTING -->
 
 				<section>
 					<h1>📸 Snapshot Testing</h1>
 				</section>
+
+				<!-- ============================ -->
 
 				<section>
 					<img src="assets/snapshot.png" alt="">
@@ -526,6 +526,103 @@ coverageReporters: ['json', 'lcov', 'clover'],
 				<section>
 				<img src="assets/report.png" alt="">
 				</section>
+
+				<!-- ============================ -->
+
+				<!-- EXTENSIONS -->
+
+				<section>
+					<h1>🖇 Extend 🖇</h1>
+				</section>
+
+				<!-- ============================ -->
+
+				<section>
+				<p>Extend expect</p>
+				<pre><code data-trim data-noescape class="hljs js">
+expect.extend({
+  toBeForty: (result) => 
+    result === 40 ? ({ pass: true }) : ({ pass: false })
+})
+				</code></pre>
+				<pre class="fragment"><code data-trim data-noescape class="hljs js">
+expect.toBeForty(40)
+				</code></pre>
+
+				</code></pre>
+				<pre class="fragment"><code data-trim data-noescape class="hljs js">
+expect.not.toBeForty(40)
+				</code></pre>
+				</section>
+
+				<!-- ============================ -->
+
+				<section data-transition="slide-in fade-out">
+					<p>Custom test failure messages</p>
+					<pre><code data-trim data-noescape class="hljs js" data-line-numbers>
+expect.extend({
+  toBeForty: (result) => {
+  if(result === 40) return {
+    message: 'result was 40, expected anything other than 40'
+    pass: true
+  }) else return {
+    message: `result was ${result}, expected 40`
+    pass: false
+  }
+})
+					</code></pre>
+				</section>
+
+				<!-- ============================ -->
+
+				<section data-transition="fade-in slide-out">
+					<p>Custom test failure messages</p>
+					<pre><code data-trim data-noescape class="hljs js" data-line-numbers="4-5">
+expect.extend({
+  toBeForty: (result) => {
+  if(result === 40) return {
+    message: 'result was 40, expected anything other than 40'
+    pass: true
+  }) else return {
+    message: `result was ${result}, expected 40`
+    pass: false
+  }
+})
+					</code></pre>
+				</section>
+
+				<!-- ============================ -->
+
+				<section>
+					<pre><code data-trim data-noescape class="hljs js">
+// Act
+const distanceKilometers = haversine(utrechtCentral, infi)
+// 1.196 km
+// Assert
+expect(distanceKilometers).toBeGreaterThan(1)
+expect(distanceKilometers).toBeLessThan(1.4)
+					</code></pre>
+				</section>
+
+			<!-- ============================ -->
+
+				<section>
+					<img src="assets/extend.png" alt="">
+				</section>
+
+				<!-- ============================ -->
+
+				<section>
+					<pre><code data-trim data-noescape class="hljs js">
+// Act
+const distanceKilometers = haversine(utrechtCentral, infi)
+// 1.196 km
+// Assert
+expect(distanceKilometers).toBeWithinRange(1, 1.4)
+					</code></pre>
+				</section>
+
+				<!-- THE END -->
 
         <section>
 					<h2>Thank you!</h2>
