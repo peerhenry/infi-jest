@@ -217,14 +217,16 @@
 				<section>
 					<h1>🤡</h1>
 					<p>Just an alias of test, lol!</p>
+					<pre class="fragment"><code data-trim data-noescape class="hljs js">
+describe('NameFormatter', () => {
+  it('should format name', () => {...})
+})
+					</code></pre>
 				</section>
 
+				<!-- ENVIRONMENT -->
+				
 
-        <!-- ENVIRONMENT -->
-
-        <!-- COVERAGE -->
-
-        <!-- SNAPSHOT TESTING -->
 
         <!-- ============================ -->
 				<!-- MOCKING THINGS -->
@@ -487,11 +489,48 @@ jest.mock('@/MyClass.js', () =>
           </div>
         </section>
 
-        <!-- ============================ -->
+				<!-- ============================ -->
+				
+				
 
-        <!-- SNAPSHOT TESTING -->
+				<!-- SNAPSHOT TESTING -->
 
-        <section>Slide 2</section>
+				<section>
+					<h1>📸 Snapshot Testing</h1>
+				</section>
+
+				<section>
+					<img src="assets/snapshot.png" alt="">
+				</section>
+
+				<!-- ============================ -->
+				
+				<!-- COVERAGE -->
+				<section>
+					<h1>☔ Coverage</h1>
+				</section>
+
+				<!-- ============================ -->
+
+				<section>
+<p class="small-header">jest.config.js</p>
+<pre><code>
+collectCoverage: true,
+collectCoverageFrom: ['src/**/*.{js,vue}', '!**/node_modules/**'],
+coverageReporters: ['json', 'lcov', 'clover'],
+</code></pre>
+				</section>
+
+				<!-- ============================ -->
+
+				<section>
+				<img src="assets/report.png" alt="">
+				</section>
+
+        <section>
+					<h2>Thank you!</h2>
+					<a href="https://github.com/peerhenry/infi-jest">https://github.com/peerhenry/infi-jest</a>
+				</section>
       </div>
     </div>
 
